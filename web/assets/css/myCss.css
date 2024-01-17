@@ -1,0 +1,57 @@
+.login{
+    margin-left:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:solid;
+   height: 100vh;
+}
+
+.container{
+    margin-top:200px;
+    margin-right:250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+form{
+    width:50%;
+    margin-left: 150px;
+    border:solid;
+    border-radius:0.5em;
+    }
+
+
+legend{
+    text-align: center;
+}
+.submit{
+    width:100%;
+    margin-top:10px;
+}
+input
+{
+    font-size: 14pt;
+    padding: 1.5vh 2%;
+    padding-left: 4%;
+    border-radius: 5px;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+form h2
+{
+    padding-bottom: 2vh;
+    margin-bottom: 3vh;
+    opacity: 0.9;
+    border-bottom: rgba(20, 20, 20, 0.1) 1px solid;
+}
+.password{
+    text-align: center;
+    padding:10px;
+}
+h1{
+    text-align: center;
+}

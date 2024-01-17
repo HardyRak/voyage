@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+        <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../assets/dist/css/adminlte.min.css">
+    </head>
+    <body>
+        
+        <%
+            for(int i=0;i<dure.length;i++){
+            %>
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title"><%=dure[i].getTypeDure() %></h3>
+                    <h3 class="card-title"><%=bouquet.getNom() %></h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th>Activite</th>
+                          <th>Nombre</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <%
+                            Activite[] activites=bouquet.getActivite(con);
+                            for(int j=0;j<activites.length;j++){
+                            %>
+                                <tr>
+                                    <td></td>
+                                    <td><%=activites[j].getNom() %><input type="hidden" name="activite<%=dure[i].getIddure() %>" value="<%=activites[j].getIdActivite()%>"></td>
+                                    <td>
+                                      <div class="form-group">
+                                          <input type="number" class="form-control" name="nombreDure<%=dure[i].getIddure() %>">
+                                      </div>
+                                    </td>
+                                  </tr>
+                            <% }
+                        %>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+            <% }
+        %>
+        <input type="submit" class="form-control bg-light" value="valider">
+            <!-- /.card -->
+    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../assets/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../assets/dist/js/demo.js"></script>
+    </body>
+</html>
